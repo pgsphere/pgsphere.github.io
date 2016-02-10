@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>&#13;        Create an index
+      </TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="
+            pgSphere 1.1.5
+        "
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="
+            Functions
+        "
+HREF="funcs.html"><LINK
+REL="NEXT"
+TITLE="
+        Usage examples
+      "
+HREF="examples.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="pg_sphere.css"><META
+NAME="creation"
+CONTENT="2016-02-10T17:42:38"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>pgSphere 1.1.5</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="funcs.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="examples.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="indices"
+>7. Create an index</A
+></H1
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="ind.sphere"
+>7.1. Spherical index</A
+></H2
+><P
+>&#13;          <SPAN
+CLASS="application"
+>pgSphere</SPAN
+> uses <TT
+CLASS="literal"
+>GiST</TT
+>
+          to create spherical indices. An index speeds up the execution
+          time of operators <A
+HREF="operators.html#op.over"
+><TT
+CLASS="literal"
+>&#60;@</TT
+></A
+>, <A
+HREF="operators.html#op.over"
+><TT
+CLASS="literal"
+>@</TT
+></A
+>, <A
+HREF="operators.html#op.over"
+><TT
+CLASS="literal"
+>&#38;&#38;</TT
+></A
+>, <A
+HREF="operators.html#op.cross"
+><TT
+CLASS="literal"
+>#</TT
+></A
+>, <A
+HREF="operators.html#op.equal"
+><TT
+CLASS="literal"
+>=</TT
+></A
+>, and <A
+HREF="operators.html#op.equal"
+><TT
+CLASS="literal"
+>!=</TT
+></A
+>.  You can create
+          an index with the following spherical data types:
+        </P
+><P
+></P
+><UL
+><LI
+><P
+>&#13;               point (<SPAN
+CLASS="type"
+>spoint</SPAN
+>)
+            </P
+></LI
+><LI
+><P
+>&#13;              circle (<SPAN
+CLASS="type"
+>scircle</SPAN
+>)
+            </P
+></LI
+><LI
+><P
+>&#13;              line (<SPAN
+CLASS="type"
+>sline</SPAN
+>)
+            </P
+></LI
+><LI
+><P
+>&#13;              ellipse (<SPAN
+CLASS="type"
+>sellipse</SPAN
+>)
+            </P
+></LI
+><LI
+><P
+>&#13;              polygon (<SPAN
+CLASS="type"
+>spoly</SPAN
+>)
+            </P
+></LI
+><LI
+><P
+>&#13;              path (<SPAN
+CLASS="type"
+>spath</SPAN
+>)
+            </P
+></LI
+><LI
+><P
+>&#13;              coordinates range (<SPAN
+CLASS="type"
+>sbox</SPAN
+>)
+            </P
+></LI
+></UL
+><DIV
+CLASS="example"
+><A
+NAME="AEN1203"
+></A
+><P
+><B
+>Example 50. Simple index of spherical points</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;CREATE TABLE test (
+  pos spoint NOT NULL
+);
+-- Put in data now
+CREATE INDEX test_pos_idx USING GIST ON test (pos);
+VACUUM ANALYZE test;
+          </PRE
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="funcs.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="examples.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Functions</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Usage examples</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

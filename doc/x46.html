@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>&#13;            Installation
+        </TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="
+            pgSphere 1.1.5
+        "
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="
+            What is pgSphere?
+        "
+HREF="x20.html"><LINK
+REL="NEXT"
+TITLE="
+            Data types
+        "
+HREF="types.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="pg_sphere.css"><META
+NAME="creation"
+CONTENT="2016-02-10T17:42:38"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>pgSphere 1.1.5</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x20.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="types.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN46"
+>2. Installation</A
+></H1
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN48"
+>2.1. Download</A
+></H2
+><P
+>  
+                <SPAN
+CLASS="application"
+>pgSphere</SPAN
+> is not part of the <SPAN
+CLASS="application"
+>PostgreSQL</SPAN
+> software. 
+                You can download it from the <SPAN
+CLASS="application"
+>pgSphere</SPAN
+> homepage
+                <A
+HREF="https://github.com/akorotkov/pgsphere"
+TARGET="_top"
+><I
+CLASS="citetitle"
+>https://github.com/akorotkov/pgsphere</I
+></A
+>
+            </P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN56"
+>2.2. Installation</A
+></H2
+><P
+>&#13;                You will need <SPAN
+CLASS="application"
+>PostgreSQL
+                9.1</SPAN
+> or above. We assume that you have
+                <SPAN
+CLASS="application"
+>PostgreSQL</SPAN
+> already compiled and
+                installed. Please note: Depending on your system configuration mostly you have to be logged in as the system
+                superuser.
+            </P
+><P
+>&#13;                There are two ways to compile <SPAN
+CLASS="application"
+>pgSphere</SPAN
+>.
+                The first is to copy the sources into the contribution directory of
+                <SPAN
+CLASS="application"
+>PostgreSQL</SPAN
+>'s source tree 
+                (<TT
+CLASS="filename"
+>POSTGRESQL_SRC/src/contrib</TT
+>).
+                Then, change into <TT
+CLASS="filename"
+>POSTGRESQL_SRC/src/contrib</TT
+>. 
+                If the sources are not yet installed and the directory
+                <TT
+CLASS="filename"
+>pg_sphere</TT
+> does not exist, take the
+                gzipped <SPAN
+CLASS="application"
+>pgSphere</SPAN
+> sources ( e. g.,
+                <TT
+CLASS="filename"
+>pg_sphere_xxx.tgz</TT
+> ) and run:
+            </P
+><PRE
+CLASS="programlisting"
+>&#13;shell&#62; tar -xzf path/to/pg_sphere_xxx.tgz
+            </PRE
+><P
+>&#13;                Now, change into the <TT
+CLASS="filename"
+>pg_sphere</TT
+>
+                directory and run :
+            </P
+><PRE
+CLASS="programlisting"
+>&#13;shell&#62; make
+            </PRE
+><P
+>&#13;                and to install <SPAN
+CLASS="application"
+>pgSphere</SPAN
+> :
+            </P
+><PRE
+CLASS="programlisting"
+>&#13;shell&#62; make install
+            </PRE
+><P
+>&#13;              The second way does not require the <SPAN
+CLASS="application"
+>PostgreSQL</SPAN
+> sources but
+              the configuration tool <SPAN
+CLASS="application"
+>pg_config</SPAN
+>.
+            </P
+><P
+>&#13;              First unpack the <SPAN
+CLASS="application"
+>pgSphere</SPAN
+> sources:
+            </P
+><PRE
+CLASS="programlisting"
+>&#13;shell&#62; tar -xzf path_to_pg_sphere_xxx.tgz
+            </PRE
+><P
+>&#13;              Now, change into the <TT
+CLASS="filename"
+>pg_sphere</TT
+>
+              directory and run:
+            </P
+><PRE
+CLASS="programlisting"
+>&#13;shell&#62; make USE_PGXS=1 PG_CONFIG=/path/to/pg_config
+            </PRE
+><P
+>&#13;              To install <SPAN
+CLASS="application"
+>pgSphere</SPAN
+> you have to run :
+            </P
+><PRE
+CLASS="programlisting"
+>&#13;shell&#62; make USE_PGXS=1 PG_CONFIG=/path/to/pg_config install
+            </PRE
+><P
+>&#13;                To check the installation change into the <TT
+CLASS="filename"
+>pg_sphere</TT
+> source
+                directory again and run:
+            </P
+><PRE
+CLASS="programlisting"
+>&#13;shell&#62; make installcheck
+            </PRE
+><P
+>&#13;                The check status will be displayed. Please note, the check gives different results with 
+		different <SPAN
+CLASS="application"
+>PostgreSQL</SPAN
+>-versions. Currently, the check should
+		run without errors with <SPAN
+CLASS="application"
+>PostgreSQL</SPAN
+>-version 8.4. Otherwise check
+		the file <TT
+CLASS="filename"
+>regression.diff</TT
+>.
+            </P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN95"
+>2.3. Creating a database with <SPAN
+CLASS="application"
+>pgSphere</SPAN
+></A
+></H2
+><P
+>&#13;                We assume you have already created a database
+                <SPAN
+CLASS="database"
+>datab</SPAN
+>, where <SPAN
+CLASS="database"
+>datab</SPAN
+>
+                is the name of any database. 
+                Presupposing the name of your
+                <SPAN
+CLASS="application"
+>PostgreSQL</SPAN
+>'s superuser is
+                <CODE
+CLASS="parameter"
+>postgres</CODE
+>, type:
+            </P
+><PRE
+CLASS="programlisting"
+>&#13;shell&#62; psql -U postgres -c 'CREATE EXTENSION pg_sphere;' datab
+            </PRE
+><P
+>&#13;                Depending on your system, it may be necessary to give more
+                <B
+CLASS="command"
+>psql</B
+> options like port or host name. 
+                Please have a look at the
+                <SPAN
+CLASS="application"
+>PostgreSQL</SPAN
+> documentation for more
+                details.
+            </P
+><P
+>&#13;                To get the version of installed pgSphere software, simply 
+                call:
+            </P
+><PRE
+CLASS="programlisting"
+>&#13;pgsql&#62; SELECT pg_sphere_version();
+            </PRE
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x20.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="types.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>What is pgSphere?</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Data types</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>
