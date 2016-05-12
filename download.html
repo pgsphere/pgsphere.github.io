@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+	<title>pgSphere</title>
+	<meta charset="utf-8">
+	<meta name="description" content="pgSphere home">
+	<link href="css/pgsphere.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width; initial-scale=1.1;">
+</head>
+
+<body>
+
+<header>
+	<div id="header_div">
+		<div class="logo_div">
+			<a href="index.html">
+				<img src="img/pg_sphere.png" alt="pgSphere logo"/>
+			</a>
+		</div>
+		<h1>
+			<a class="h1" href="index.html">PgSphere</a> provides spherical
+			data types, functions, operators, and indexing for
+			<a class="h1" href="http://www.postgresql.org">PostgreSQL</a>
+		</h1>
+	</div>
+</header>
+
+<main role="main">
+<top_bar id="navigation">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li class="current"><a href="download.html">Download</a></li>
+		<li><a href="documentation.html">Documentation</a></li>
+		<li><a href="community.html">Community</a></li>
+		<li><a href="development.html">Development</a></li>
+		<li><a href="support.html">Support</a></li>
+	</ul>
+</top_bar>	
+
+<div id="empty_space"></div>
+
+<article>
+	<section>
+		<b>Releaseses</b>
+		<br/>
+		(To be announced.)
+	</section>
+</article>
+
+<article>
+	<section>
+		<b>Development version</b>
+		<br/>
+		You can find the development source code of pgSphere on Github, presently as
+		the master branch of <a href="https://github.com/akorotkov/pgsphere"
+		>https://github.com/akorotkov/pgsphere</a>.
+		You may directly download all of the source code as
+		<a href="https://github.com/akorotkov/pgsphere/archive/master.tar.gz"
+		>https://github.com/akorotkov/pgsphere/archive/master.tar.gz</a>.
+	</section>
+</article>
+
+<article>
+	<section>
+		<b>Building pgSphere</b>
+		<br/>
+		You will need PostgreSQL version 9.1 or above.
+		Next to downloading and extracting the source tree, you will need
+		to install the server development packages for PostgreSQL (or 
+		you could also compile and install PostgreSQL itself from souce.)
+		For Linux, these packages typically have names such as
+		<tt>postgresql-devel</tt> or <tt>postgresql-server-dev-9.x</tt>.
+		To compile pgSphere, run the follwing commands in its source directory:
+		<code>
+			<br/>USE_PGXS=1 make
+			<br/>sudo USE_PGXS=1 make install
+		</code>
+	</section>
+</article>
+
+
+
+</main>
+
+<footer>
+	<ul>
+		<li>
+			<a
+				href="mailto:pgsphere+subscribe@googlegroups.com"
+				ref_address="pgsphere+subscribe@googlegroups.com">contact</a>
+		</li>
+	</ul>
+	<p>
+		pgSphere development team 2016
+	</p>
+</footer>
+
+</body>
+
+</html>

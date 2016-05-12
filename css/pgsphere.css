@@ -1,0 +1,186 @@
+body
+{
+  margin: 0;
+  margin-top: 3rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  font-family: "Nimbus Sans L", Helvetica, "Helvetica Neue", "Liberation Sans", Univers, Frutiger, "Frutiger Linotype", Arial, Verdana, sans-serif;
+}
+
+html
+{
+	padding: 3px 2%;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+h1
+{
+	font: bold 2rem;
+	color: #022b4b;
+}
+a.h1:link
+{
+	color:#022b4b;
+	text-decoration:none;
+}
+a.h1:visited
+{
+	color:#022b4b;
+	text-decoration:none;
+}
+a.h1:hover
+{
+	color:#2697d9;
+	text-decoration:none;
+}
+
+main
+{
+	width: 100%
+	display: block;
+	position: relative;
+}
+
+header
+{
+	font-size: 1.2rem;
+	width: 100%;
+	background: #fafdfe;
+	border: 1px #658b96 solid;
+	min-width: 12.8rem;
+}
+
+top_bar
+{
+	font-size: 1.1rem;
+	float: left;
+	width: 100%;
+	min-width: 12.8rem;
+	display: block;
+	text-align: left;
+	border: 1px #658b96 solid;
+}
+top_bar ul
+{
+	float: left;
+	width: 100%; 
+	background: grey;
+	list-style-type: none;
+}
+top_bar ul li
+{
+	float: center;
+}
+top_bar ul li a
+{
+	text-decoration: none;
+	float: left;
+	padding: 0.4rem 0 0.4rem 0.4rem;
+	color: white;
+}
+top_bar ul li a:before
+{
+	content:" ";
+	margin-right: 0.1rem;
+	margin-left: 0.1em;
+}
+top_bar ul li a:after
+{
+	content:" ";
+	margin-right: 0.35rem;
+	margin-left:  0.35rem;
+}
+top_bar li a:hover, top_bar li a:focus
+{
+	background: #2697d9;
+}
+
+.current a
+{
+	color: #ff8800;
+	background: #555555;
+}
+
+#empty_space
+{
+	min-height: 5rem;
+}
+
+#full_width
+{
+	width: 100% - 14em;
+}
+
+article
+{
+	float: left;
+	clear: both;
+	background: #fafdfe;
+	border: 1px #658b96 solid;
+	margin-top: 1.9rem;
+	width: 100% - 14em;
+	padding: 1.0rem 0.9rem;
+	font-size: 1.0rem;
+}
+section
+{
+	font-size: 1.1rem;
+	float: left;
+	word-wrap: break-word;
+}
+
+#header_div
+{
+	word-wrap: break-wodrd;
+	min-height: 12rem;
+	margin: 1.3rem 0.5rem 1.2rem 0.8rem;
+}
+
+.logo_div
+{
+	margin: 0 2rem 1.0rem 0.8rem; 
+	float: left; width: 8.4em; height: 10.2em;
+}
+	  
+img
+{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a[href^="mailto:"]:hover:after
+{
+	content: ": " attr(ref_address);
+}
+
+footer
+{
+	float: left;
+	width: 100%;
+	margin: 0.7rem 0 2.4rem 0;
+	font-size: 0.9rem;
+	color: grey
+}
+footer ul
+{
+	float: left;
+	list-style-type: none;
+}
+footer ul li a
+{
+	text-decoration: none;
+	font-size: 0.9rem;
+	color: grey
+}
+footer p
+{
+	float: right;
+	margin-top: 0;
+	padding-top: 0;
+	text-align: right;
+}
